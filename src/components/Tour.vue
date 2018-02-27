@@ -70,7 +70,7 @@
 
 <script>
     export default {
-        name: 'tour',
+        name: 'Tour',
         props: {
             id: 1
         },
