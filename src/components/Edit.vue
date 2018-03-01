@@ -43,7 +43,7 @@
                                     <div class="row">
                                         <div class="col s12">
                                             <div class="center-align">
-                                                <button class="btn waves-effect waves-light" type="submit" id="send">Confirmer
+                                                <button class="btn waves-effect waves-light" id="send">Confirmer
                                                     <i class="material-icons right">send</i>
                                                 </button>
                                             </div>
