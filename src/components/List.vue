@@ -1,6 +1,7 @@
 <template>
     <div>
-        <navbar/>
+        <navbar :title="'Visites'"/>
+        <div class="spacer"></div>
         <div class="container" id="app">
             <tour/>
         </div>

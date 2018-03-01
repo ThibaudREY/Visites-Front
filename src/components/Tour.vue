@@ -75,8 +75,7 @@
             id: 1
         },
         components: {},
-        beforeUpdate() {
-            // eslint-disable-next-line
+        mounted () {
             $('ul.tabs').tabs();
         }
     }
