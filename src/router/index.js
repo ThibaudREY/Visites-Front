@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import vueConfig from 'vue-config'
 import List from '@/components/List'
 import Edit from '@/components/Edit'
+import Sign from '@/components/Sign'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueResource from 'vue-resource';
 
@@ -43,6 +44,11 @@ export default new Router({
             path: '/edit',
             name: 'Edit',
             component: Edit,
+        },
+        {
+            path: '/sign',
+            name: 'Sign',
+            component: Sign,
         }
     ]
 })

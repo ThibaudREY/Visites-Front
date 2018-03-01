@@ -43,7 +43,7 @@
                                     <div class="row">
                                         <div class="col s12">
                                             <div class="center-align">
-                                                <button class="btn waves-effect waves-light" id="send">Confirmer
+                                                <button v-on:click="send()" class="btn waves-effect waves-light">Confirmer
                                                     <i class="material-icons right">send</i>
                                                 </button>
                                             </div>
@@ -136,7 +136,6 @@
 <script>
     import navbar from './Navbar.vue'
     import * as VueGoogleMaps from 'vue2-google-maps'
-    import router from 'vue-router'
 
     export default {
         name: 'Edit',
@@ -260,6 +259,18 @@
                 $('#address').val(this.$route.params.address ? this.$route.params.address : '')
                 $('#agent').val(this.$route.params.agent ? this.$route.params.agent : '')
                 $('#client').val(this.$route.params.agent ? this.$route.params.agent : '')
+            },
+            send () {
+                this.$router.push(
+                    {
+                        name: 'Sign',
+                        params: {
+                            agent: $('#agent').val(),
+                            client: $('#client').val(),
+                            address: $('#address').val()
+                        }
+                    }
+                )
             }
         },
         created () {
@@ -272,19 +283,6 @@
 
             $('#modal-button').on('click', () => {
                 location.reload()
-            })
-
-            $('#send').on('click', () =>  {
-                router.push(
-                    {
-                        name: 'sign',
-                        params: {
-                            agent: $('#agent').val(),
-                            client: $('#client').val(),
-                            address: $('#address').val()
-                        }
-                    }
-                )
             })
         }
     }
